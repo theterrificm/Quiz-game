@@ -4,16 +4,11 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.dot{
-    height: 15px;
-    width: 15px;
-    background: transparent;
-    border-radius: 50px;
-    border: 1px black;
-    border-style: solid;
-
-    float: left;
+#main-h{
+    font-weight: 600;
+    font-family: cursive;
 }
+
 .btn-outline-dark:hover .dot{
     border-color: white;
 }
@@ -26,4 +21,12 @@
 #nxt-btn{
     display: none;
     
+}
+.correct-ans{
+    background: lightgreen!important;
+    border-color: lightgreen!important;
+}
+.wrong-ans{
+    background-color: red!important;
+    border-color: red!important;
 }
