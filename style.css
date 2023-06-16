@@ -30,3 +30,8 @@
     background-color: red!important;
     border-color: red!important;
 }
+.question{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

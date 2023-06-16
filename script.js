@@ -10,6 +10,7 @@ $(document).ready(function(){
       $(".py-5.text-center").css("cursor", "no-drop")
       $("#nxt-btn").css("display", "initial")
       $("#nxt-btn").removeAttr("disabled")
+      //$("#nxt-btn").text("Play Again")
       
     }
     else{
@@ -19,7 +20,7 @@ $(document).ready(function(){
       $(".py-5.text-center").css("cursor", "no-drop")
       $("#nxt-btn").css("display", "initial")
       $("#nxt-btn").removeAttr("disabled")
-      $("#nxt-btn").text("Try Again")
+      $("#nxt-btn").text("Play Again")
     }
 
 
@@ -55,7 +56,7 @@ function gettingRandomNums(data){
   const max = data.length
   recData = data
   const countryIndex = Math.round(Math.random() * max) //Index for country
-  answer = recData[countryIndex].city //Global variable for correct answer
+  answer = recData[countryIndex].capital //Global variable for correct answer
   const country = recData[countryIndex].country
  
 
@@ -67,7 +68,7 @@ function gettingRandomNums(data){
   for (let i=0; i<3; i++){
     let wrongIndex = Math.round(Math.random() * max)
     if(wrongIndex != countryIndex){
-      wrongAns.push(recData[wrongIndex].city)
+      wrongAns.push(recData[wrongIndex].capital)
       
     }
     else{
