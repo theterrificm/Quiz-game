@@ -18,10 +18,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-#nxt-btn{
-    display: none;
-    
-}
+
 .correct-ans{
     background: lightgreen!important;
     border-color: lightgreen!important;

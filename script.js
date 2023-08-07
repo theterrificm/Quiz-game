@@ -1,20 +1,23 @@
 $(document).ready(function(){
   fetchAsyncData()
-
+  
   $(".ans-btn").on('click', function(event){ 
+    
 
-    if($(this).data('answer') === answer){
+    if(event.target.getAttribute('data-answer') === answer){
+
+   
       
       $(this).addClass("correct-ans")
       $(".btn").attr('disabled', 'true')
       $(".py-5.text-center").css("cursor", "no-drop")
       $("#nxt-btn").css("display", "initial")
       $("#nxt-btn").removeAttr("disabled")
-      //$("#nxt-btn").text("Play Again")
+      $("#nxt-btn").text("Next")
       
     }
     else{
-    
+      
       $(this).addClass(" wrong-ans")
       $(".btn").attr('disabled', 'true')
       $(".py-5.text-center").css("cursor", "no-drop")
@@ -32,7 +35,8 @@ $(document).ready(function(){
     $(".py-5.text-center").css("cursor", "pointer")
     $(".opt").removeClass("correct-ans")
     $(".opt").removeClass("wrong-ans")
-    $(this).css('display', 'none')
+    $("#nxt-btn").text("Next")
+    $(this).attr("disabled", "true")
 
     
 
@@ -76,9 +80,9 @@ function gettingRandomNums(data){
       console.log('mismatched');
     }
   }
+
   
-  
-  var correctIndex = Math.round(Math.random() * 4) 
+  var correctIndex = Math.floor(Math.random() * 4)
   wrongAns.splice(correctIndex , 0 , answer)
   const answerBox = document.getElementsByClassName("opt")
 
